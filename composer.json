@@ -1,0 +1,44 @@
+{
+	"name": "ommu/arnica",
+	"description": "Arnica - Creative Coming Soon Template",
+	"type": "ommu-theme",
+	"keywords": [
+		"theme",
+		"arnica",
+		"front-template",
+		"coming-soon",
+		"maintenance",
+		"ommu",
+		"ommu-platform",
+		"yii2"
+	],
+	"license": "Apache-2.0",
+	"homepage": "https://github.com/ommu/theme-arnica",
+	"support": {
+		"issues": "https://github.com/ommu/theme-arnica/issues",
+		"wiki": "https://github.com/ommu/theme-arnica/wiki",
+		"source": "https://github.com/ommu/theme-arnica"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ommu/theme-arnica.git"
+	},
+	"authors": [
+		{
+			"name": "Putra Sudaryanto",
+			"email": "putra@ommu.co",
+			"homepage": "https://ommu.co",
+			"role": "Developer"
+		},
+		{
+			"name": "AthenaStudio",
+			"homepage": "https://themeforest.net/user/athenastudio",
+			"role": "Creator"
+		}
+	],
+	"require": {
+		"php": "~7.0",
+		"yiisoft/yii2": "~2.0.14",
+		"fortawesome/font-awesome": "~4.7"
+	}
+}
