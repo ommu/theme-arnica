@@ -4,5 +4,16 @@ desc: Arnica - Creative Coming Soon Template
 author:
   name: Putra Sudaryanto
   phone: (+62)856-299-4114
-  email: putra@sudaryanto.id
-  homepage: https://sudaryanto.id
+  email: putra@ommu.co
+  homepage: https://ommu.co
+
+sublayout:
+  green: Default Theme (Green)
+  blue: BLue Theme
+  orange: Orange Theme
+  purple: Purple Theme
+  yellow: Yellow Theme
+  grey: Grey Theme
+
+theme_setting:
+  bootstrap4: false

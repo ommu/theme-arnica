@@ -39,6 +39,16 @@
 	"require": {
 		"php": "~7.0",
 		"yiisoft/yii2": "~2.0.14",
-		"fortawesome/font-awesome": "~4.7"
+		"yiisoft/yii2-bootstrap": "*",
+		"bower-asset/font-awesome": "~5.1",
+		"npm-asset/animate.css": "~3.7",
+		"npm-asset/wowjs": "~1.1",
+		"npm-asset/ommu--animated-headline": "~1.0",
+		"npm-asset/kbw-countdown": "~2.1",
+		"npm-asset/dialog-fx": "*",
+		"npm-asset/malihu-custom-scrollbar-plugin": "~3.0",
+		"npm-asset/vegas": "~2.4",
+		"npm-asset/jquery.mb.ytplayer": "~3.2",
+		"npm-asset/jaaulde-cookies": "~3.0"
 	}
 }

@@ -1,0 +1,30 @@
+a, 
+.welcome h2 strong, 
+.action-btn:hover,
+.contact h5 i,
+.contact p a:hover,
+.social ul li a:hover {
+	color:#ff5744;
+}
+
+.action-btn {
+	background:#ff5744;
+}
+
+.social-media ul li i:hover,
+#zoom-in:hover, #zoom-out:hover,
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+	background-color:#ff5744;
+}
+
+#zoom-in, #zoom-out {
+  	background-color:rgba(255, 87, 68, 0.8);
+}
+
+.dialog__content:before {
+	border-color:#ff5744;
+}
+
+.page-loader .progress {
+	border-left-color:#ff5744;
+}
