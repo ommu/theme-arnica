@@ -53,8 +53,8 @@ $this->registerJs($js, \app\components\View::POS_HEAD); ?>
 	<div class="progress"></div>
 </div>
 
-<?php //begin.Background
-echo $content; ?>
+<?php //begin.background
+echo \themes\arnica\components\BackgroundContent::widget(); ?>
 
 <?php //begin.Page content ?>
 <div class="page modal-effect">
