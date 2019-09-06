@@ -91,7 +91,7 @@ $(function() {
 		- Countdown timer -
 	**************************/
 	if ($("#countdown").length>0) {
-		var date = new Date("December 25, 2020 00:00:00");
+		var date = new Date(countdownDate);
 
 		$("#countdown").countdown({
 			until:date,

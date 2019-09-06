@@ -38,10 +38,11 @@ $this->beginPage();?>
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<?php echo Html::csrfMetaTags() ?>
 	<title><?php echo Html::encode($this->pageTitle) ?></title>
-	<?php $this->head(); ?>
-	<script type="text/javascript">
-		var themeAssetUrl = '<?php echo $themeAsset->baseUrl ?>';
-	</script>
+	<?php $this->head();
+$js = <<<JS
+	var themeAssetUrl = '{$themeAsset->baseUrl}';
+JS;
+$this->registerJs($js, \app\components\View::POS_HEAD); ?>
 </head>
 
 <body>
@@ -78,21 +79,8 @@ echo $content; ?>
 				<div class="container-fluid">
 					<div class="row">
 						<div class="col-lg-12">
-
-							<h2 class="wow fadeInUp cd-headline clip" data-wow-delay="0.3s">
-								<span class="blc"><strong>Arnica</strong> Is </span>
-								<span class="cd-words-wrapper">
-									<b class="is-visible">Coming Soon</b>
-									<b>Creative</b>
-									<b>Launching</b>
-								</span>
-							</h2>
-
-							<p class="wow fadeInUp" data-wow-delay="0.6s">
-								Our website is under construction, we are working very hard to give you the best experience.
-								<br class="hidden-xs"> You will love <strong>Arnica</strong> as much as we do. <span class="hidden-xs">It will morph perfectly on your needs!</span>
-							</p>
-
+							<?php //begin.countdown and message
+							echo \themes\arnica\components\CountdownAndMessage::widget(); ?>
 						</div>
 					</div>
 				</div>
@@ -166,25 +154,8 @@ echo $content; ?>
 				<div class="modal-content">
 					<div class="tbl-top">
 						<div class="modal-body">
-							<?php //begin.About ?>
-							<div class="about-dsc">
-								<?php //begin.Title ?>
-								<div class="row section-title">
-									<div class="col-lg-12">
-										<h3>About</h3>
-										<hr>
-									</div>
-								</div>
-
-								<div class="row">
-									<div class="col-lg-12">
-										<p>
-											Curabitur ac <strong>fringilla mauris</strong>, vitae luctus orci. Pellentesque eu placerat nunc. <strong>Vivamus</strong> tellus nec semper. Etiam ex felis, maximus id commodo sit amet,
-											<strong>congue vitae ipsum</strong>. Aliquam at nisl nulla. Fusce quis purus nec lacus laoreet luctus at vitae libero.
-										</p>
-									</div>
-								</div>
-							</div>
+							<?php //begin.about us
+							echo \themes\arnica\components\AboutUs::widget(); ?>
 
 							<?php //begin.footer
 							echo \themes\arnica\components\Footer::widget([
