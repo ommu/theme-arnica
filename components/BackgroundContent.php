@@ -53,6 +53,12 @@ class BackgroundContent extends \yii\base\Widget
 			if(isset($bgType))
 				$this->backgroundType = $bgType;
 
+			$bgSlider = Yii::$app->params['arnica']['bgSlider'];
+			if(isset($bgSlider))
+				$this->backgroundSlide = $bgSlider;
+			else
+				$this->backgroundSlide = [];
+
 			if(isset(Yii::$app->params['arnica']['videoParam']))
 				$this->videoParams = Yii::$app->params['arnica']['videoParam'];
 		}
