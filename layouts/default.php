@@ -54,7 +54,10 @@ $this->registerJs($js, \app\components\View::POS_HEAD); ?>
 </div>
 
 <?php //begin.background
-echo \themes\arnica\components\BackgroundContent::widget(); ?>
+if($isDemoTheme)
+	echo $content;
+else
+	echo \themes\arnica\components\BackgroundContent::widget(); ?>
 
 <?php //begin.Page content ?>
 <div class="page modal-effect">

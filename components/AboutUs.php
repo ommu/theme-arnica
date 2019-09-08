@@ -27,6 +27,8 @@ class AboutUs extends \yii\base\Widget
 		$isDemoTheme = Yii::$app->isDemoTheme() ? true : false;
 
 		if(!$isDemoTheme) {
+			$this->pageId = Yii::$app->params['arnica']['aboutPageId'];
+
 			if($this->pageId) {
 				$model = CorePages::find()
 					->alias('t')

@@ -17,15 +17,8 @@ use yii\helpers\Url;
 $themeAsset = \themes\arnica\assets\ThemePluginAsset::register($this);
 ?>
 
-<a id="bgndVideo" class="player" data-property="{
-	videoURL:'https://youtu.be/kn-1D5z3-Cs',
-	mobileFallbackImage:'<?php echo $themeAsset->baseUrl;?>/demo/images/bg/video.jpg',
-	containment:'body',
-	autoPlay:true, 
-	showControls:false,
-	mute:false, 
-	startAt:0, 
-	stopAt:0, 
-	opacity:1
-}">
-</a>
+<?php //begin.background
+echo \themes\arnica\components\BackgroundContent::widget([
+	'backgroundType' => 'video',
+	'backgroundBaseUrl' => $themeAsset->baseUrl,
+]); ?>

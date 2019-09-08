@@ -9,6 +9,7 @@ use yii\helpers\Url;
 
 $themeAsset = \themes\arnica\assets\ThemePluginAsset::register($this);
 $context = $this->context;
+
 $js = <<<JS
 	var countdownDate = '{$context->countdown}';
 JS;

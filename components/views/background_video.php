@@ -6,20 +6,16 @@
 
 use yii\helpers\Html;
 use yii\helpers\Url;
+use yii\helpers\Json;
 
 $themeAsset = \themes\arnica\assets\ThemePluginAsset::register($this);
 $context = $this->context;
+
+$videoParams = Json::encode($context->videoParams);
+$js = <<<JS
+	var videoParams = $videoParams;
+JS;
+$this->registerJs($js, \app\components\View::POS_HEAD);
 ?>
 
-<a id="bgndVideo" class="player" data-property="{
-	videoURL:'https://youtu.be/kn-1D5z3-Cs',
-	mobileFallbackImage:'<?php echo $themeAsset->baseUrl;?>/demo/images/bg/video.jpg',
-	containment:'body',
-	autoPlay:true, 
-	showControls:false,
-	mute:false, 
-	startAt:0, 
-	stopAt:0, 
-	opacity:1
-}">
-</a>
+<a id="bgndVideo" class="player"></a>

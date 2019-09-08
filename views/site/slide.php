@@ -17,4 +17,8 @@ use yii\helpers\Url;
 $themeAsset = \themes\arnica\assets\ThemePluginAsset::register($this);
 ?>
 
-<div class="bg modal-effect slideshow" data-animation="kenburns"></div>
+<?php //begin.background
+echo \themes\arnica\components\BackgroundContent::widget([
+	'backgroundType' => 'slide',
+	'backgroundBaseUrl' => $themeAsset->baseUrl,
+]); ?>
