@@ -105,9 +105,8 @@ class CountdownAndMessage extends \yii\base\Widget
 			if($online != 1)
 				$this->message = $online == 0 ? $construction_text['maintenance'] : $construction_text['comingsoon'];
 
+			$this->pageId = Yii::$app->params['arnica']['headlinePageId'];
 			if($this->pageId) {
-				$this->pageId = Yii::$app->params['arnica']['headlinePageId'];
-	
 				$model = CorePages::find()
 					->alias('t')
 					->select(['name','desc','quote'])
