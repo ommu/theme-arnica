@@ -979,10 +979,10 @@ label.error {
 	color:#444;
 }
 .about-dsc p {
-	margin-top: 10px;
+	margin-bottom: 15px;
 }
 .about-dsc p:last-child {
-	margin-top: 0;
+	margin-bottom: 0;
 }
 
 /* Contact */
