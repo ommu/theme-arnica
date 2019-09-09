@@ -106,15 +106,16 @@ else
 					<div class="row">
 						<div class="col-lg-12">
 
-							<?php //begin.Subscribe ?>
+							<?php //begin.Subscribe
+							if($isDemoTheme || (!$isDemoTheme && isset(Yii::$app->params['arnica']['subscribe']) && Yii::$app->params['arnica']['subscribe'])) {?>
 							<div class="action-btn white wow fadeInUp" data-wow-delay="1.2s" data-dialog="newsletter">
 								<i class="fas fa-envelope"></i> Subscribe
 							</div>
+							<?php }?>
 
 							<div class="action-btn more-info wow fadeInUp" data-wow-delay="1.5s" data-toggle="modal" data-target="#about">
 								More Info
 							</div>
-
 						</div>
 					</div>
 				</div>
