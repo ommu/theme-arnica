@@ -621,12 +621,9 @@ label.error {
 }
 
 #subscribe #notifyMe .form-group .form-control {
-	text-align:center;
 	background:#fff;
 	border:none;
-	border-radius:0;
 	height:50px;
-	font-weight:600;
 	outline:medium none;
 	padding:0 1em;
 	width:100%;
@@ -683,16 +680,19 @@ label.error {
 	font-weight:600;
 }
 
-#subscribe input[type='text'] {
+#subscribe input[type='text'],
+#subscribe input[type='email'],
+#subscribe input[type='number'] {
 	width:100%;
 	color:#444;
 	background:#fafafa;
 	border:1px solid #ddd;
 	padding:14px 18px;
-	margin-bottom:30px !important;
+	margin-bottom:20px !important;
 	font-size:14px;
 	line-height:1;
 	outline:none;
+	text-align: left !important;
 	-webkit-border-radius:3px;
 	   -moz-border-radius:3px;
 			border-radius:3px;
@@ -701,7 +701,9 @@ label.error {
     		transition:all 0.3s;
 }
 
-#subscribe input[type='text']:focus {
+#subscribe input[type='text']:focus,
+#subscribe input[type='email']:focus,
+#subscribe input[type='number']:focus {
 	background:#fff;
 }
 

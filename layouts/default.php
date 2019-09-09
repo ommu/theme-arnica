@@ -129,7 +129,6 @@ else
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-lg-12">
-
 					<ul>
 						<li><a href="#"><i class="fab fa-twitter"></i></a></li>
 						<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
@@ -137,7 +136,6 @@ else
 						<li><a href="#"><i class="fab fa-dribbble"></i></a></li>
 						<li><a href="#"><i class="fab fa-vimeo-v"></i></a></li>
 					</ul>
-
 				</div>
 			</div>
 		</div>
@@ -174,45 +172,8 @@ else
 
 </div>
 
-<?php //begin.Newsletter popup ?>
-<div id="newsletter" class="dialog">
-	<div class="dialog__overlay"></div>
-	<div class="dialog__content">
-		<div class="dialog-inner">
-			<h4>Stay Tuned</h4>
-			<p class="hidden-xs">We launch our new website soon.
-				<br>Please stay updated and follow!</p>
-
-			<?php //begin.Newsletter form ?>
-			<div id="subscribe">
-				<form action="php/subscribe.php" id="notifyMe" method="POST">
-					<div class="form-group">
-						<div class="controls">
-							<?php //begin.Field  ?>
-							<input type="text" id="mail-sub" name="email" placeholder="Enter your email address" class="email srequiredField" />
-							<?php //begin.Spinner top left during the submission ?>
-							<i class="fas fa-spinner opacity-0"></i>
-							<?php //begin.Button ?>
-							<button class="action-btn submit">Get Notified</button>
-							<div class="clear"></div>
-						</div>
-					</div>
-				</form>
-
-				<?php //begin.Answer for the newsletter form is displayed in the next div, do not remove it. ?>
-				<div class="block-message">
-					<div class="message">
-						<p class="notify-valid"></p>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<?php //begin.Popup close button ?>
-		<button class="close-newsletter" data-dialog-close><i class="fas fa-times"></i></button>
-	</div>
-
-</div>
+<?php //begin.Newsletter popup
+echo \themes\arnica\components\Newsletter::widget(); ?>
 
 <?php $this->endBody(); ?>
 </body>
