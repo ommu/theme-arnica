@@ -44,6 +44,17 @@ class BackgroundContent extends \yii\base\Widget
 		}
 	}
 
+	public function getBackgroundSlide($bgSlider)
+	{
+		if(!empty($bgSlider)) {
+			foreach ($bgSlider as $key => $slider) {
+				$bgSlider[$key]['src'] = Yii::getAlias($slider['src']);
+			}
+		}
+
+		return $bgSlider;
+	}
+
 	public function run() 
 	{
 		$isDemoTheme = Yii::$app->isDemoTheme() ? true : false;
@@ -55,7 +66,7 @@ class BackgroundContent extends \yii\base\Widget
 
 			$bgSlider = Yii::$app->params['arnica']['bgSlider'];
 			if(isset($bgSlider))
-				$this->backgroundSlide = $bgSlider;
+				$this->backgroundSlide = $this->getBackgroundSlide($bgSlider);
 			else
 				$this->backgroundSlide = [];
 
