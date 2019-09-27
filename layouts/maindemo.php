@@ -19,10 +19,11 @@ $this->beginPage();?>
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<?php echo Html::csrfMetaTags() ?>
 	<title><?php echo Html::encode($this->pageTitle) ?></title>
-	<?php $this->head(); ?>
-	<script type="text/javascript">
-		var themeAssetUrl = '<?php echo $themeAsset->baseUrl; ?>';
-	</script>
+	<?php $this->head();
+$js = <<<JS
+	const themeAssetUrl = '{$themeAsset->baseUrl}';
+JS;
+$this->registerJs($js, $this::POS_HEAD); ?>
 </head>
 
 <body>
