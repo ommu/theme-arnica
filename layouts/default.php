@@ -39,8 +39,15 @@ $this->beginPage();?>
 	<?php echo Html::csrfMetaTags() ?>
 	<title><?php echo Html::encode($this->pageTitle) ?></title>
 	<?php $this->head();
+	$baseUrl = Yii::getAlias('@web');
 $js = <<<JS
+	const baseUrl = '{$baseUrl}';
 	const themeAssetUrl = '{$themeAsset->baseUrl}';
+if ('serviceWorker' in navigator) {
+	window.addEventListener('load', function() {
+		navigator.serviceWorker.register(baseUrl + '/service-worker.js');
+	});
+}
 JS;
 $this->registerJs($js, $this::POS_HEAD); ?>
 </head>
