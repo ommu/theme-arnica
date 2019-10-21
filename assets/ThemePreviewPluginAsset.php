@@ -7,6 +7,7 @@ class ThemePreviewPluginAsset extends \yii\web\AssetBundle
 
 	public $css = [
 		"demo/css/preview/style.css",
+		"https://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,600,700,700italic",
 	];
 
 	public $js = [

@@ -9,6 +9,7 @@ class ThemeAsset extends \yii\web\AssetBundle
 		"css/style.css",
 		"css/media.css",
 		["css/colors/green.css", ['class'=>'colors']],
+		"https://fonts.googleapis.com/css?family=Poppins:300,400,400italic,600,700,700italic,800",
 	];
 
 	public $depends = [
