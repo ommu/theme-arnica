@@ -6,8 +6,6 @@ use ommu\core\models\CorePages;
 
 class AboutUs extends \yii\base\Widget
 {
-	use \ommu\traits\UtilityTrait;
-
 	public $title;
 	public $description;
 

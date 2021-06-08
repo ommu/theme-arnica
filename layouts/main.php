@@ -8,7 +8,15 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 ?>
 
-<?php $this->beginContent('@themes/arnica/layouts/front_default.php'); ?>
+<?php 
+$context = $this->context;
+if ($context->hasMethod('isVisitorBanned')) {
+    if ($context->isVisitorBanned() === true) {
+        throw new \yii\web\ForbiddenHttpException(Yii::t('app', 'You are not allowed to access this page.'));
+    }
+}
+
+$this->beginContent('@themes/arnica/layouts/front_default.php'); ?>
 
 <?php echo $content; ?>
 
