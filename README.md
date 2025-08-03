@@ -23,4 +23,4 @@ to the require section of your composer.json.
 
 Preview
 ------------
-https://theme.ommu.co/arnica-site
+https://theme.ommu.id/arnica-site
