@@ -1,8 +1,3 @@
-theme-arnica
-=============
-Arnica - Creative Coming Soon Template
-
-
 Installation
 ------------
 The preferred way to install this extension is through [composer](http://getcomposer.org/download/).
@@ -10,7 +5,7 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-composer require --prefer-dist ommu/arnica "dev-master"
+php composer.phar require --prefer-dist ommu/arnica "dev-master"
 ```
 
  or
@@ -19,8 +14,3 @@ composer require --prefer-dist ommu/arnica "dev-master"
 ```
 
 to the require section of your composer.json.
-
-
-Preview
-------------
-https://theme.ommu.id/arnica-site
